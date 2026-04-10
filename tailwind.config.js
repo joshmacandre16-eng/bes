@@ -1,0 +1,29 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+import forms from "@tailwindcss/forms";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./storage/framework/views/*.php",
+        "./resources/views/**/*.blade.php",
+        "./resources/js/**/*.jsx",
+        "./resources/js/**/*.js",
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                montserrat: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+                agri: "#4caf50",
+                "agri-dark": "#1f4d1f",
+                "agri-darker": "#2d6a2d",
+            },
+        },
+    },
+
+    plugins: [forms],
+};
